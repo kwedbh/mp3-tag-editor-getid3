@@ -64,7 +64,7 @@ $facebook_id = 'kwedbh';
 
 $genre = "@kwedbh";
 
-$date_only  = date("Y-m-d");
+$date  = date("Y-m-d");
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -132,7 +132,7 @@ $art = "./music/images/default.png";
 $mp3_data['title'][]   = $args['title'] ." | | ". $site_name." ";
 $mp3_data['artist'][]  = $args['artiste'];                
 $mp3_data['album'][]   = $args['album'];
-$mp3_data['year'][]    = $date_only;
+$mp3_data['year'][]    = $date;
 $mp3_data['genre'][]   = $genre;
 $mp3_data['comment'][] = $mp3_comment;
 
