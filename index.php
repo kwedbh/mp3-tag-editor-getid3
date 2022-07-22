@@ -67,10 +67,11 @@ $genre = "@kwedbh";
 $date_only  = date("Y-m-d");
 
 
- if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-   $args = $_POST['music'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-// $limg= trim($args['img']); 
+$args = $_POST['music'];
+
+
 $limg = TRUE;
 $imgtemp = explode(".", "$limg"); 
 $imgext = end($imgtemp);
@@ -81,13 +82,7 @@ $rstg = substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 6);
 $newimage="[".$site_abb."]_".($args['artiste']."_".str_replace(' ', "_", $args['title']))."_".$rstg.".".$imgext."";
 $rstimage=$imgfolder.$newimage;
 
-
-
-
-
 $lmusic= $args['url']; 
-
-// $args['img'] = $rimg;
 
 $mp3_comment = "This Music Was Downloaded From ".htmlspecialchars($site_name).". Stay Updated By Liking/Following Us - Facebook: $facebook_id, Twitter: @$twitter_id."; 
 
